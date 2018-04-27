@@ -9,6 +9,10 @@ app = Flask(__name__)
 def index():
     return render_template('template.html')
 
+@app.route('/<botaox>')
+def botaox(botaox):
+    print('botao {}'.format(botaox))
+    return redirect('/')
 
 @app.route('/botao1')
 def botao():
